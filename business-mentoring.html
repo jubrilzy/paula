@@ -78,39 +78,39 @@ h2.dsp.wh{color:#fff}h2.dsp.wh em{color:var(--g-mid)}
 .pull{font-family:'Playfair Display',serif;font-style:italic;font-size:18.5px;color:var(--ink);line-height:1.65;border-left:3px solid var(--g);padding:14px 20px 14px 22px;margin:24px 0;background:var(--g-light);border-radius:0 var(--r) var(--r) 0}
 .wave{overflow:hidden;line-height:0;margin-bottom:-1px;display:block}
 .wave svg{display:block;width:100%}
+.body-p{font-size:16px;line-height:1.95;color:var(--muted);font-weight:400;margin-top:16px}
 
-/* PAGE HERO */
-.page-hero{background:var(--cream);overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 76px);position:relative}
-.page-hero::before{content:'';position:absolute;top:-120px;right:-60px;width:480px;height:480px;background:radial-gradient(circle,rgba(119,178,67,.1) 0%,transparent 68%);border-radius:50%;pointer-events:none;z-index:0}
-.hero-text{padding:80px 64px 80px 72px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
-.breadcrumb{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:22px;display:flex;align-items:center;gap:8px}
-.breadcrumb a{color:var(--g);font-weight:600}
-.hero-tag{display:inline-flex;align-items:center;gap:12px;margin-bottom:24px}
+/* ── PAGE HERO — matches about.html page-hero style ── */
+.page-hero{background:var(--cream);padding:72px 40px 80px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-120px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(119,178,67,.11) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.page-hero::after{content:'';position:absolute;bottom:-80px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(189,100,28,.08) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.page-hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:1}
+.breadcrumb{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--g);font-weight:600;transition:color .2s}
+.hero-tag{display:inline-flex;align-items:center;gap:12px;margin-bottom:20px}
 .hero-tag-line{width:36px;height:1.5px;background:var(--o)}
 .hero-tag-text{font-family:'Playfair Display',serif;font-size:13px;font-style:italic;color:var(--o)}
-.hero-text h1{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,70px);font-weight:400;line-height:1.06;color:var(--ink);margin-bottom:14px;letter-spacing:-.015em}
-.hero-text h1 .em-g{font-style:italic;color:var(--g)}
-.hero-text h1 .em-o{font-style:italic;color:var(--o)}
-.hero-sub1{font-family:'Playfair Display',serif;font-size:clamp(16px,1.8vw,21px);font-style:italic;color:var(--o);margin-bottom:8px;font-weight:400}
-.hero-sub2{font-family:'Playfair Display',serif;font-size:clamp(15px,1.6vw,18px);font-style:italic;color:var(--muted);margin-bottom:22px;font-weight:400}
-.hero-desc{font-size:15.5px;line-height:1.9;color:var(--muted);font-weight:300;max-width:440px;margin-bottom:38px}
+.page-hero-text h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,62px);font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:14px;letter-spacing:-.015em}
+.page-hero-text h1 .em-g{font-style:italic;color:var(--g)}
+.page-hero-text h1 .em-o{font-style:italic;color:var(--o)}
+.hero-sub1{font-family:'Playfair Display',serif;font-size:clamp(15px,1.7vw,19px);font-style:italic;color:var(--o);margin-bottom:6px;font-weight:400}
+.hero-sub2{font-family:'Playfair Display',serif;font-size:clamp(14px,1.5vw,17px);font-style:italic;color:var(--muted);margin-bottom:20px;font-weight:400}
+.hero-desc{font-size:15.5px;line-height:1.9;color:var(--muted);font-weight:300;max-width:440px;margin-bottom:34px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.hero-img{position:relative;overflow:hidden}
-.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;min-height:500px;transition:transform 8s ease}
-.hero-img:hover img{transform:scale(1.04)}
-.hero-img-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(253,249,244,.18) 0%,transparent 30%),linear-gradient(to top,rgba(26,26,24,.45) 0%,transparent 48%)}
-.hero-cap{position:absolute;bottom:32px;left:32px;font-family:'Great Vibes',cursive;font-size:30px;color:rgba(255,255,255,.88);text-shadow:0 2px 16px rgba(0,0,0,.3)}
+.page-hero-img{position:relative}
+.page-hero-img img{width:100%;height:540px;object-fit:cover;object-position:center top;border-radius:8px;box-shadow:var(--sh-lg)}
+.page-hero-img-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(119,178,67,.1) 0%,transparent 50%),linear-gradient(to top,rgba(26,26,24,.45) 0%,transparent 46%);border-radius:8px}
+.page-hero-cap{position:absolute;bottom:28px;left:28px;font-family:'Great Vibes',cursive;font-size:32px;color:rgba(255,255,255,.9);text-shadow:0 2px 16px rgba(0,0,0,.3)}
 
 /* FLORAL STRIP */
 .floral-strip{background:var(--o-light);border-top:1px solid #ead6c0;border-bottom:1px solid #ead6c0;padding:18px 40px}
 .floral-strip-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 .floral-strip-inner p{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--o)}
-.floral-div{color:var(--g);font-size:16px;opacity:.55}
+.floral-div{display:flex;align-items:center;opacity:.5}
 
 /* HOW MENTORING HELPS */
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .intro-r{border-left:1px solid var(--border);padding-left:60px}
-.body-p{font-size:16px;line-height:1.95;color:var(--muted);font-weight:400;margin-top:16px}
 
 /* BENEFIT LIST */
 .benefit-list{display:flex;flex-direction:column;gap:12px;margin-top:26px}
@@ -128,7 +128,8 @@ h2.dsp.wh{color:#fff}h2.dsp.wh em{color:var(--g-mid)}
 .who-card{background:#fff;border-radius:6px;padding:36px 30px;box-shadow:var(--sh-lg);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s;position:relative;overflow:hidden}
 .who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--g),var(--g-mid))}
 .who-card:hover{transform:translateY(-8px);box-shadow:0 36px 72px rgba(26,26,24,.2)}
-.who-icon{width:52px;height:52px;background:var(--g-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:24px}
+/* Theme icon circle */
+.who-icon{width:52px;height:52px;background:var(--g-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .who-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--ink);margin-bottom:12px}
 .who-card p{font-size:15px;line-height:1.75;color:var(--muted)}
 
@@ -163,17 +164,25 @@ h2.dsp.wh{color:#fff}h2.dsp.wh em{color:var(--g-mid)}
 .pricing-sec::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(to right,var(--o),var(--g),var(--o))}
 .pricing-hd{text-align:center;margin-bottom:52px}
 .pricing-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:860px;margin:0 auto}
-.p-card{background:#fff;border-radius:8px;padding:42px 36px;box-shadow:var(--sh-lg);border:1px solid var(--border);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+
+/* Card base */
+.p-card{background:#fff;border-radius:8px;padding:42px 36px;box-shadow:var(--sh-lg);border:1px solid var(--border);position:relative;transition:transform .3s,box-shadow .3s}
 .p-card:hover{transform:translateY(-6px);box-shadow:0 28px 64px rgba(26,26,24,.15)}
-.p-card.featured{border-color:var(--g);border-width:2px}
-.p-card.featured::after{content:'Most Popular';position:absolute;top:18px;right:-30px;background:var(--g);color:#fff;font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:5px 42px;transform:rotate(45deg)}
-.p-icon{font-size:32px;margin-bottom:16px}
+
+/* Featured card — clean border, no ribbon clip trick */
+.p-card.featured{border:2px solid var(--g)}
+
+/* Popular label sits INSIDE the card flow, top right corner */
+.popular-label{display:inline-flex;align-items:center;gap:6px;background:var(--g-light);border:1px solid var(--g-mid);color:var(--g);font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:16px}
+.popular-label svg{width:11px;height:11px;fill:var(--g)}
+
+.p-icon{width:48px;height:48px;background:var(--g-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
 .p-card h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:var(--ink);margin-bottom:8px}
-.p-price{display:flex;align-items:baseline;gap:4px;margin:18px 0 20px}
+.p-price{display:flex;align-items:baseline;gap:4px;margin:16px 0 18px}
 .p-price strong{font-family:'Playfair Display',serif;font-size:42px;font-weight:400;color:var(--g)}
 .p-price span{font-size:13px;color:var(--muted)}
-.p-card p{font-size:15px;line-height:1.75;color:var(--muted);margin-bottom:20px}
-.p-divider{height:1px;background:var(--border);margin:18px 0}
+.p-card p{font-size:15px;line-height:1.75;color:var(--muted);margin-bottom:18px}
+.p-divider{height:1px;background:var(--border);margin:16px 0}
 
 /* CTA STRIP */
 .cta-strip{background:var(--o-light);border-top:1px solid #ead6c0;border-bottom:1px solid #ead6c0}
@@ -223,10 +232,11 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
 .ft-btm-row1 a:hover{color:var(--g)}
 .ft-btm-address{font-size:11px;color:rgba(255,255,255,.3);line-height:1.7;max-width:560px}
 
-/* RESPONSIVE */
+/* ── RESPONSIVE ── */
 @media(max-width:1199px){
   nav{padding:0 36px}
-  .hero-text{padding:60px 48px 60px 52px}
+  .page-hero{padding:60px 36px 72px}
+  .page-hero-inner{gap:52px}
   .intro-grid{gap:52px}
   .intro-r{padding-left:44px}
   .how-grid{gap:56px}
@@ -239,9 +249,9 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
 @media(max-width:1023px){
   nav{padding:0 28px;height:68px}
   .nav-links li a{font-size:10.5px;padding:8px 9px}
-  .page-hero{grid-template-columns:1fr}
-  .hero-text{padding:56px 36px 44px}
-  .hero-img img{min-height:58vw;height:58vw}
+  .page-hero{padding:56px 32px 64px}
+  .page-hero-inner{gap:36px}
+  .page-hero-img img{height:420px}
   .intro-grid{grid-template-columns:1fr}
   .intro-r{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:32px}
   .who-cards{grid-template-columns:1fr 1fr;gap:18px}
@@ -262,8 +272,9 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
   .ham{display:flex}
   .nav-links{display:none}
   .sec{padding:72px 28px}
-  .hero-text{padding:44px 22px 40px}
-  .hero-text h1{font-size:clamp(36px,8.5vw,52px)}
+  .page-hero{padding:48px 22px 56px}
+  .page-hero-inner{grid-template-columns:1fr;gap:28px}
+  .page-hero-img img{height:66vw}
   .who-cards{grid-template-columns:1fr}
   .style-traits{grid-template-columns:1fr}
   .floral-strip{padding:14px 22px}
@@ -277,7 +288,8 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
 @media(max-width:599px){
   nav{padding:0 18px}
   .sec{padding:64px 20px}
-  .hero-text{padding:36px 18px 36px}
+  .page-hero{padding:40px 18px 48px}
+  .page-hero-img img{height:76vw}
   .hero-btns{flex-direction:column}
   .btn{width:100%;justify-content:center}
   .how-badge{bottom:10px;right:10px;max-width:175px}
@@ -306,11 +318,11 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
       <img src="https://uc9c6352aed6b378284c6e0fa6aa.previews.dropboxusercontent.com/p/thumb/AC_rGsNTPjPMFzMjjYu8Ka1SfA0TJAGrwoCxTh8kIuHSt2FtH4Sa2KC5XfFVOXAwDKvshqjLocSGbxPWnH3pJJFkzUGgh7LD6fetn6jHufX6uBTDyOP7UdHPD0TYVwhXKSJM0vpDEPgiVsg-sGlh3dvUCSMgDnwgP2ABehzakiQ4b2_Vxsillu7_k28taUM_27Y8H0H0JqB87HEu7eAbrg6e4ocy4EDJtZFFEI0WIk0xcVMkod2caYeZzuVWmHvZDgAUS4CyrBTMKgz1DIk65k62fzIOtrgkkJP6tbJXL3ahi9KZV59PVqn660864AB3hmCa-L6d3Li9I8UI_P9wsP2nQfFVgOVZyGNwINNy8fU0QkJOgryqj7ycdvFxK5grHuU/p.png" alt="Paula Wood" style="height:68px;width:auto;display:block;object-fit:contain"/>
     </a>
     <ul class="nav-links">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/business-mentoring.html" class="active">Business Mentoring</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="business-mentoring.html" class="active">Business Mentoring</a></li>
       <li><a href="#">Career Coaching</a></li>
       <li><a href="#">Training &amp; Workshops</a></li>
-      <li><a href="/about.html">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="nav-cta">Book a Call</a></li>
     </ul>
     <button class="ham" onclick="toggleMob()" aria-label="Menu">
@@ -319,39 +331,41 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
   </nav>
   <div class="mob" id="mobMenu">
     <a href="index.html">Home</a>
-    <a href="/business-mentoring.html">Business Mentoring</a>
+    <a href="business-mentoring.html">Business Mentoring</a>
     <a href="#">Career Coaching</a>
     <a href="#">Training &amp; Workshops</a>
-    <a href="/about.html">About</a>
+    <a href="about.html">About</a>
     <button class="mob-cta" onclick="window.open('https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard','_blank')">Book a Free Discovery Call</button>
   </div>
 </div>
 
-<!-- HERO -->
+<!-- PAGE HERO — about.html style -->
 <section class="page-hero">
-  <div class="hero-text rl">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>·</span>
-      <span>Business Mentoring</span>
+  <div class="page-hero-inner">
+    <div class="page-hero-text rl">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>·</span>
+        <span>Business Mentoring</span>
+      </div>
+      <div class="hero-tag">
+        <span class="hero-tag-line"></span>
+        <span class="hero-tag-text">Mentoring for Growth and Clarity</span>
+      </div>
+      <h1>One to One<br><span class="em-g">Business</span><br><span class="em-o">Mentoring</span></h1>
+      <p class="hero-sub1">What does success mean to you?</p>
+      <p class="hero-sub2">Bring clarity to your business and confidence to your decisions.</p>
+      <p class="hero-desc">Running a business can be exciting and overwhelming. There is so much to juggle. Sometimes it is hard to see the wood for the trees. My mentoring helps you pause, reflect and refocus — so you can move forward with purpose and calm confidence.</p>
+      <div class="hero-btns">
+        <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-g">Book a Discovery Call</a>
+        <a href="#how-we-work" class="btn btn-o-ghost">How It Works</a>
+      </div>
     </div>
-    <div class="hero-tag">
-      <span class="hero-tag-line"></span>
-      <span class="hero-tag-text">Mentoring for Growth and Clarity</span>
+    <div class="page-hero-img rr">
+      <img src="https://images.unsplash.com/photo-1773332611522-06b86b48cbf1?q=80&w=2070&auto=format&fit=crop" alt="Business Mentoring with Paula Wood" loading="eager"/>
+      <div class="page-hero-img-ov"></div>
+      <div class="page-hero-cap">your next chapter starts here</div>
     </div>
-    <h1>One to One<br><span class="em-g">Business</span><br><span class="em-o">Mentoring</span></h1>
-    <p class="hero-sub1">What does success mean to you?</p>
-    <p class="hero-sub2">Bring clarity to your business and confidence to your decisions.</p>
-    <p class="hero-desc">Running a business can be exciting and overwhelming. There is so much to juggle: strategy, finances, clients, marketing and time. Sometimes it is hard to see the wood for the trees. My mentoring helps you pause, reflect and refocus so you can move forward with purpose and calm confidence.</p>
-    <div class="hero-btns">
-      <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-g">Book a Discovery Call</a>
-      <a href="#how-we-work" class="btn btn-o-ghost">How It Works</a>
-    </div>
-  </div>
-  <div class="hero-img">
-    <img src="https://images.unsplash.com/photo-1773332611522-06b86b48cbf1?q=80&w=2070&auto=format&fit=crop" alt="Business Mentoring with Paula Wood" loading="eager"/>
-    <div class="hero-img-ov"></div>
-    <div class="hero-cap">your next chapter starts here</div>
   </div>
 </section>
 
@@ -359,11 +373,18 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
 <div class="floral-strip">
   <div class="floral-strip-inner">
     <p>Clarity in your direction</p>
-    <span class="floral-div">✿</span>
+    <span class="floral-div">
+      <!-- leaf SVG -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22v-7" stroke="#77b243" stroke-width="1.6" stroke-linecap="round"/><path d="M12 15C12 15 5 10 6 4c4 0 9 3 9 9 0 2-.9 3.5-3 2z" fill="rgba(119,178,67,.25)" stroke="#77b243" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
     <p>Confidence in decisions</p>
-    <span class="floral-div">✿</span>
-    <p>Growth that feels right for you</p>
-    <span class="floral-div">✿</span>
+    <span class="floral-div">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22v-7" stroke="#77b243" stroke-width="1.6" stroke-linecap="round"/><path d="M12 15C12 15 5 10 6 4c4 0 9 3 9 9 0 2-.9 3.5-3 2z" fill="rgba(119,178,67,.25)" stroke="#77b243" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
+    <p>Growth that feels right</p>
+    <span class="floral-div">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22v-7" stroke="#77b243" stroke-width="1.6" stroke-linecap="round"/><path d="M12 15C12 15 5 10 6 4c4 0 9 3 9 9 0 2-.9 3.5-3 2z" fill="rgba(119,178,67,.25)" stroke="#77b243" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </span>
     <p>Balance that sustains you</p>
   </div>
 </div>
@@ -418,18 +439,41 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
       <h2 class="dsp wh reveal" style="text-align:center;margin-top:10px">Is this the right fit<br><em>for you?</em></h2>
     </div>
     <div class="who-cards">
+      <!-- Card 1: plant/growth icon -->
       <div class="who-card reveal d1">
-        <div class="who-icon">🌿</div>
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22v-9" stroke="#77b243" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M12 13C12 13 5 8 6 2c5 0 10 4 10 10 0 2.5-1.5 4-4 1z" fill="rgba(119,178,67,.2)" stroke="#77b243" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M12 16c0 0-4-2-4-6" stroke="#77b243" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
         <h3>Small Business Owners</h3>
         <p>You want to grow with clarity and focus — not just work harder. You are ready to step back, see the bigger picture and build something that truly reflects your vision.</p>
       </div>
+      <!-- Card 2: compass/direction icon -->
       <div class="who-card reveal d2">
-        <div class="who-icon">✨</div>
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9.5" stroke="#77b243" stroke-width="1.6"/>
+            <circle cx="12" cy="12" r="1.5" fill="#bd641c"/>
+            <polygon points="12,4.5 13.5,11.5 12,12.5 10.5,11.5" fill="#bd641c"/>
+            <polygon points="12,19.5 13.5,12.5 12,11.5 10.5,12.5" fill="#77b243" opacity=".5"/>
+          </svg>
+        </div>
         <h3>Consultants &amp; Freelancers</h3>
         <p>You are ready to refine your direction, sharpen your offer and grow with purpose. You know what you are good at — you just need help making it work harder for you.</p>
       </div>
+      <!-- Card 3: seedling/new beginnings icon -->
       <div class="who-card reveal d3">
-        <div class="who-icon">🌸</div>
+        <div class="who-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22v-5" stroke="#77b243" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M12 17C12 17 7 14 7 9a5 5 0 0110 0c0 5-5 8-5 8z" fill="rgba(119,178,67,.2)" stroke="#77b243" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M12 17c0 0 3-2 3-5" stroke="#77b243" stroke-width="1.3" stroke-linecap="round" opacity=".6"/>
+            <path d="M5 21h14" stroke="#bd641c" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
         <h3>Aspiring Entrepreneurs</h3>
         <p>Thinking of setting up a business and want a trusted sounding board — not just another checklist. Someone who listens, encourages and helps you find your own way.</p>
       </div>
@@ -538,8 +582,15 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
       <p class="reveal" style="text-align:center;font-size:16px;line-height:1.85;color:var(--muted);max-width:580px;margin:16px auto 0;font-weight:300">Mentoring can be delivered as a one-off clarity session or through ongoing monthly support — depending entirely on your needs.</p>
     </div>
     <div class="pricing-cards">
+
+      <!-- Card 1: Clarity Session -->
       <div class="p-card reveal d1">
-        <div class="p-icon">🌿</div>
+        <div class="p-icon">
+          <!-- star/sparkle icon in brand green -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#77b243" stroke-width="1.6" stroke-linejoin="round" fill="rgba(119,178,67,.15)"/>
+          </svg>
+        </div>
         <h3>Clarity Session</h3>
         <div class="p-price">
           <strong>£95</strong>
@@ -550,17 +601,34 @@ footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
         <p style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:24px">Book directly by emailing Paula or filling in the contact form below.</p>
         <a href="index.html#contact" class="btn btn-g" style="width:100%;justify-content:center">Book This Session</a>
       </div>
+
+      <!-- Card 2: Ongoing Support — "Most Popular" as inline label -->
       <div class="p-card featured reveal d2">
-        <div class="p-icon">✨</div>
-        <h3>Ongoing Monthly Support</h3>
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:4px">
+          <div class="p-icon" style="margin-bottom:0">
+            <!-- leaf/growth icon in brand green -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22v-9" stroke="#77b243" stroke-width="1.7" stroke-linecap="round"/>
+              <path d="M12 13C12 13 5 8 6 2c5 0 10 4 10 10 0 2.5-1.5 4-4 1z" fill="rgba(119,178,67,.2)" stroke="#77b243" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M12 16c0 0-4-2-4-6" stroke="#77b243" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- Most Popular pill — inline, no clipping issues -->
+          <span class="popular-label">
+            <svg viewBox="0 0 12 12"><path d="M6 1l1.2 3.7H11l-3.1 2.2 1.2 3.7L6 8.5 2.9 10.6l1.2-3.7L1 4.7h3.8z" fill="#77b243"/></svg>
+            Most Popular
+          </span>
+        </div>
+        <h3 style="margin-top:12px">Ongoing Monthly Support</h3>
         <div class="p-price">
-          <strong style="font-size:32px">Let's talk</strong>
+          <strong style="font-size:30px;line-height:1.2">Let's<br>talk</strong>
         </div>
         <p>Continuous mentoring support tailored to where you are in your journey. Ideal if you are navigating a period of real growth, change or challenge and want a trusted partner.</p>
         <div class="p-divider"></div>
         <p style="font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:24px">Begin with a free 10-minute discovery call to explore how we can work together.</p>
         <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-o" style="width:100%;justify-content:center">Book Free Discovery Call →</a>
       </div>
+
     </div>
   </div>
 </section>
