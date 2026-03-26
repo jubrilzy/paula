@@ -1,1 +1,723 @@
-<>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Career Coaching | Clarity, Confidence & Career Direction | Paula Wood</title>
+<link rel="icon" type="image/png" href="https://uc9c6352aed6b378284c6e0fa6aa.previews.dropboxusercontent.com/p/thumb/AC_rGsNTPjPMFzMjjYu8Ka1SfA0TJAGrwoCxTh8kIuHSt2FtH4Sa2KC5XfFVOXAwDKvshqjLocSGbxPWnH3pJJFkzUGgh7LD6fetn6jHufX6uBTDyOP7UdHPD0TYVwhXKSJM0vpDEPgiVsg-sGlh3dvUCSMgDnwgP2ABehzakiQ4b2_Vxsillu7_k28taUM_27Y8H0H0JqB87HEu7eAbrg6e4ocy4EDJtZFFEI0WIk0xcVMkod2caYeZzuVWmHvZDgAUS4CyrBTMKgz1DIk65k62fzIOtrgkkJP6tbJXL3ahi9KZV59PVqn660864AB3hmCa-L6d3Li9I8UI_P9wsP2nQfFVgOVZyGNwINNy8fU0QkJOgryqj7ycdvFxK5grHuU/p.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Nunito+Sans:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --g:#77b243;--g-dark:#2d4a1a;--g-light:#eef6e3;--g-mid:#c8e3a8;
+  --o:#bd641c;--o-light:#faf0e8;
+  --cream:#fdf9f4;--cream2:#f5efe5;
+  --ink:#1a1a18;--ink2:#3d3d38;--muted:#555550;
+  --border:#e8e0d4;--white:#ffffff;
+  --r:3px;
+  --sh:0 4px 40px rgba(26,26,24,.07);
+  --sh-lg:0 20px 60px rgba(26,26,24,.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+ul{list-style:none}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:none}
+.rl{opacity:0;transform:translateX(-44px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rl.visible{opacity:1;transform:none}
+.rr{opacity:0;transform:translateX(44px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.rr.visible{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.34s}.d4{transition-delay:.48s}
+
+/* TOPBAR */
+.topbar{background:var(--ink);color:rgba(255,255,255,.7);text-align:center;padding:10px 20px;font-size:12px;letter-spacing:.1em;font-weight:300}
+.topbar a{color:var(--g-mid);font-weight:600;transition:color .2s}
+.topbar a:hover{color:#fff}
+
+/* NAV */
+.nav-wrap{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+.nav-wrap.scrolled{box-shadow:0 2px 28px rgba(0,0,0,.08)}
+nav{max-width:1340px;margin:0 auto;padding:0 48px;height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-logo{display:flex;flex-direction:column;line-height:1;gap:4px}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links li a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);font-weight:600;padding:9px 13px;border-radius:var(--r);transition:color .2s,background .2s}
+.nav-links li a:hover,.nav-links li a.active{color:var(--g);background:var(--g-light)}
+.nav-cta{background:var(--o) !important;color:#fff !important;border-radius:var(--r);transition:background .25s,transform .2s !important}
+.nav-cta:hover{background:#a85518 !important;transform:translateY(-1px) !important}
+.ham{display:none;flex-direction:column;gap:5px;padding:6px}
+.ham span{width:22px;height:1.5px;background:var(--ink);display:block;transition:all .3s}
+.mob{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--border);padding:20px 28px 24px;gap:12px}
+.mob.open{display:flex}
+.mob a{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);font-weight:600;padding:8px 0;border-bottom:1px solid var(--border)}
+.mob .mob-cta{background:var(--o);color:#fff;padding:13px 20px;text-align:center;border-radius:var(--r);border:none;margin-top:4px;font-size:12px;letter-spacing:.14em;font-weight:600}
+
+/* SHARED UTILITIES */
+.sec{padding:96px 40px}
+.wrap{max-width:1160px;margin:0 auto}
+.wrap-sm{max-width:900px;margin:0 auto}
+.ov{font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;color:var(--o);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ov::before{content:'';display:block;width:26px;height:1.5px;background:var(--o)}
+.ov.gn{color:var(--g)}.ov.gn::before{background:var(--g)}
+.ov.wh{color:rgba(255,255,255,.7)}.ov.wh::before{background:rgba(255,255,255,.4)}
+.ov.center{justify-content:center}.ov.center::before{display:none}
+h2.dsp{font-family:'Playfair Display',serif;font-size:clamp(30px,3.8vw,54px);font-weight:400;line-height:1.15;color:var(--ink);letter-spacing:-.01em}
+h2.dsp em{font-style:italic;color:var(--g)}
+h2.dsp .oi{font-style:italic;color:var(--o)}
+h2.dsp.wh{color:#fff}h2.dsp.wh em{color:var(--g-mid)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:var(--r);font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;transition:all .25s;cursor:pointer}
+.btn-g{background:var(--g);color:#fff}
+.btn-g:hover{background:#68a038;transform:translateY(-2px);box-shadow:0 10px 28px rgba(119,178,67,.35)}
+.btn-o{background:var(--o);color:#fff}
+.btn-o:hover{background:#a85518;transform:translateY(-2px);box-shadow:0 10px 28px rgba(189,100,28,.35)}
+.btn-o-ghost{border:1.5px solid var(--o);color:var(--o)}
+.btn-o-ghost:hover{background:var(--o);color:#fff;transform:translateY(-2px)}
+.pull{font-family:'Playfair Display',serif;font-style:italic;font-size:18.5px;color:var(--ink);line-height:1.65;border-left:3px solid var(--g);padding:14px 20px 14px 22px;margin:24px 0;background:var(--g-light);border-radius:0 var(--r) var(--r) 0}
+.wave{overflow:hidden;line-height:0;margin-bottom:-1px;display:block}
+.wave svg{display:block;width:100%}
+
+/* ── PAGE HERO ── */
+.page-hero{background:var(--cream);padding:72px 40px 80px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-120px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(119,178,67,.11) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.page-hero::after{content:'';position:absolute;bottom:-80px;left:-60px;width:300px;height:300px;background:radial-gradient(circle,rgba(189,100,28,.08) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.page-hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;position:relative;z-index:1}
+.breadcrumb{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.breadcrumb a{color:var(--g);font-weight:600}
+.page-hero-text h1{font-family:'Playfair Display',serif;font-size:clamp(36px,4.5vw,62px);font-weight:400;line-height:1.1;color:var(--ink);margin-bottom:22px;letter-spacing:-.015em}
+.page-hero-text h1 em{font-style:italic;color:var(--g)}
+.page-hero-text h1 .oi{font-style:italic;color:var(--o)}
+.page-hero-text p{font-size:16px;line-height:1.9;color:var(--muted);font-weight:300;max-width:440px;margin-bottom:34px}
+.page-hero-img{position:relative}
+.page-hero-img img{width:100%;height:540px;object-fit:cover;object-position:center top;border-radius:8px;box-shadow:var(--sh-lg)}
+.page-hero-img-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(119,178,67,.1) 0%,transparent 50%),linear-gradient(to top,rgba(26,26,24,.45) 0%,transparent 46%);border-radius:8px}
+.page-hero-cap{position:absolute;bottom:28px;left:28px;font-family:'Great Vibes',cursive;font-size:32px;color:rgba(255,255,255,.9);text-shadow:0 2px 16px rgba(0,0,0,.3)}
+
+/* ── INTRO CONTENT ── */
+.intro-body p{font-size:16.5px;line-height:1.95;color:var(--muted);font-weight:400;margin-top:0;margin-bottom:16px}
+
+/* ── CHECK LIST ── */
+.chk-list{display:flex;flex-direction:column;gap:11px;margin:22px 0 28px}
+.chk-list li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.65;color:var(--ink2)}
+.chk-dot{width:22px;height:22px;background:var(--g);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.chk-dot svg{width:10px;height:10px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── TWO-COL INTRO ── */
+.intro-2col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.intro-2col-r{border-left:1px solid var(--border);padding-left:60px}
+
+/* ── GREEN SECTION: WHO IT'S FOR + PACKAGES ── */
+.green-sec{background:var(--g);position:relative;overflow:hidden}
+.green-sec::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,255,255,.07) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+/* Feminine floating circle decor */
+.green-sec::after{content:'';position:absolute;bottom:-80px;left:5%;width:260px;height:260px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none}
+.green-hd{text-align:center;margin-bottom:52px}
+.green-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.g-card{background:#fff;border-radius:8px;padding:36px 30px;box-shadow:var(--sh-lg);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s;position:relative;overflow:hidden}
+.g-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--g)}
+.g-card:hover{transform:translateY(-10px);box-shadow:0 36px 72px rgba(26,26,24,.2)}
+.g-card-icon{width:48px;height:48px;background:var(--g-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:22px}
+.g-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;color:var(--ink);margin-bottom:10px}
+.g-card p{font-size:15px;line-height:1.75;color:var(--muted)}
+
+/* ── HOW WE WORK / APPROACH ── */
+.approach-grid{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:center}
+.approach-img-wrap{position:relative}
+.approach-img-wrap img{width:100%;border-radius:12px;box-shadow:var(--sh-lg);aspect-ratio:4/5;object-fit:cover;object-position:center top}
+/* Feminine rounded corner accent */
+.approach-img-decor{position:absolute;top:-18px;left:-18px;width:90px;height:90px;border:2px solid var(--g-mid);border-radius:50%;opacity:.5;pointer-events:none}
+.approach-img-decor2{position:absolute;bottom:-14px;right:-14px;width:60px;height:60px;background:var(--o-light);border-radius:50%;border:2px solid var(--o);opacity:.4;pointer-events:none}
+.approach-badge{position:absolute;bottom:-22px;left:28px;background:#fff;border-radius:8px;padding:18px 22px;box-shadow:var(--sh-lg);border-left:3px solid var(--g)}
+.approach-badge strong{font-family:'Playfair Display',serif;font-size:14px;font-weight:500;color:var(--ink);display:block}
+.approach-badge span{font-size:11px;color:var(--muted);letter-spacing:.04em}
+.approach-txt p{font-size:16px;line-height:1.95;color:var(--muted);font-weight:400;margin-bottom:16px}
+
+/* ── PACKAGES ── */
+.pkg-sec{background:var(--cream2)}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.pkg-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--sh);transition:transform .35s,box-shadow .35s;border:1px solid var(--border);position:relative}
+.pkg-card.featured{border-color:var(--g);box-shadow:0 20px 56px rgba(119,178,67,.18)}
+.pkg-card.featured::after{display:none}
+.pkg-popular-badge{background:var(--g);color:#fff;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:8px 18px;text-align:center;width:100%}
+.pkg-card:hover{transform:translateY(-8px);box-shadow:var(--sh-lg)}
+.pkg-top{padding:30px 28px 24px;border-bottom:1px solid var(--border)}
+.pkg-icon{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:20px;background:var(--g-light)}
+.pkg-card.featured .pkg-icon{background:var(--g-light)}
+.pkg-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.pkg-sub{font-size:13px;color:var(--muted);font-weight:300;line-height:1.5}
+.pkg-price-wrap{margin-top:14px}
+.pkg-price{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:var(--o);line-height:1}
+.pkg-price sup{font-size:16px;vertical-align:top;margin-top:6px;margin-right:2px}
+.pkg-price-note{font-size:11.5px;color:var(--muted);margin-top:4px;font-weight:300}
+.pkg-body{padding:24px 28px 30px}
+.pkg-feat{display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
+.pkg-feat li{display:flex;align-items:flex-start;gap:8px;font-size:14px;line-height:1.55;color:var(--ink2)}
+.pkg-dot{width:18px;height:18px;background:var(--g-light);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.pkg-dot svg{width:9px;height:9px;fill:none;stroke:var(--g);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── STYLE SECTION ── */
+.style-sec{background:var(--white)}
+.style-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.style-img-wrap{position:relative}
+.style-img-wrap img{width:100%;border-radius:12px;box-shadow:var(--sh-lg);aspect-ratio:3/4;object-fit:cover;object-position:center top}
+/* Feminine script flourish overlay */
+.style-flourish{position:absolute;bottom:24px;left:24px;font-family:'Great Vibes',cursive;font-size:32px;color:rgba(255,255,255,.9);text-shadow:0 2px 16px rgba(0,0,0,.28);line-height:1.3}
+.style-petal{position:absolute;top:-20px;right:-20px;width:80px;height:80px;background:var(--o-light);border-radius:50% 20% 50% 20%;border:2px solid rgba(189,100,28,.2);pointer-events:none}
+.style-txt p{font-size:16px;line-height:1.95;color:var(--muted);font-weight:400;margin-bottom:16px}
+.style-stat-row{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap}
+.style-stat{background:var(--cream);border-radius:8px;padding:18px 22px;text-align:center;flex:1;min-width:120px}
+.style-stat-n{font-family:'Playfair Display',serif;font-size:32px;color:var(--g);font-weight:400;line-height:1}
+.style-stat-l{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:5px;font-weight:600}
+
+/* ── CTA STRIP ── */
+.cta-strip{background:var(--o-light);border-top:1px solid #ead6c0;border-bottom:1px solid #ead6c0}
+.cta-in{max-width:1060px;margin:0 auto;padding:72px 40px;display:grid;grid-template-columns:1fr auto 1fr;gap:48px;align-items:center}
+.cta-t h2{font-family:'Playfair Display',serif;font-size:clamp(24px,2.8vw,38px);font-weight:400;color:var(--ink);line-height:1.25}
+.cta-t h2 em{font-style:italic;color:var(--o)}
+.cta-t p{font-size:16px;line-height:1.85;color:var(--muted);font-weight:400;margin-top:14px;max-width:460px}
+.cta-div{width:1px;height:110px;background:var(--border)}
+.cta-img{position:relative}
+.cta-img img{border-radius:6px;width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:var(--sh-lg)}
+.cta-badge{position:absolute;top:-18px;right:-16px;background:var(--g);color:#fff;padding:16px 18px;border-radius:6px;text-align:center;box-shadow:0 8px 28px rgba(119,178,67,.38)}
+.cta-badge strong{display:block;font-family:'Playfair Display',serif;font-size:22px;font-weight:500}
+.cta-badge span{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+
+/* ── NEXT STEP SECTION ── */
+.next-sec{background:var(--cream)}
+.next-inner{max-width:800px;margin:0 auto;text-align:center}
+.next-inner p{font-size:16.5px;line-height:1.9;color:var(--muted);font-weight:300;margin-bottom:20px}
+.next-btns{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:34px}
+.price-note{display:inline-block;background:#fff;border:1.5px solid var(--border);border-radius:var(--r);padding:14px 22px;font-size:14px;color:var(--ink2);font-weight:400;margin-top:16px}
+.price-note strong{color:var(--o)}
+.divider-tag{display:inline-flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:10px 0}
+.divider-tag::before,.divider-tag::after{content:'';display:block;width:36px;height:1px;background:var(--border)}
+
+/* ── NEWSLETTER ── */
+.nl{background:#1e3310;padding:72px 40px}
+.nl-in{max-width:920px;margin:0 auto;display:grid;grid-template-columns:1fr auto;align-items:center;gap:60px}
+.nl-t h3{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,36px);font-weight:400;color:#fff;line-height:1.25}
+.nl-t h3 em{font-style:italic;color:var(--g-mid)}
+.nl-t p{font-size:14px;color:rgba(255,255,255,.52);font-weight:300;margin-top:10px;line-height:1.7}
+.nl-form{display:flex;min-width:340px}
+.nl-form input{flex:1;padding:14px 18px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.14);border-right:none;border-radius:var(--r) 0 0 var(--r);font-family:'Nunito Sans',sans-serif;font-size:14px;color:#fff;outline:none;transition:border-color .2s}
+.nl-form input::placeholder{color:rgba(255,255,255,.32)}
+.nl-form input:focus{border-color:var(--g)}
+.nl-form button{background:var(--g);color:#fff;padding:14px 22px;border-radius:0 var(--r) var(--r) 0;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .2s;white-space:nowrap}
+.nl-form button:hover{background:#68a038}
+
+/* ── FOOTER ── */
+footer{background:#1e3310;color:rgba(255,255,255,.68);padding:70px 40px 34px}
+.ft-inner{max-width:1160px;margin:0 auto}
+.ft-top{display:flex;flex-direction:column;align-items:center;text-align:center;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:48px}
+.ft-top .ft-logo{margin-bottom:16px}
+.ft-top p{font-size:14px;line-height:1.85;font-weight:300;color:rgba(255,255,255,.6);max-width:360px;margin-bottom:20px}
+.ft-social{display:flex;gap:10px;justify-content:center}
+.ft-social a{width:38px;height:38px;background:rgba(255,255,255,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.65);transition:background .2s,color .2s}
+.ft-social a:hover{background:var(--g);color:#fff}
+.ft-social a svg{width:15px;height:15px;fill:currentColor}
+.ft-cols{display:flex;justify-content:center;gap:80px;margin-bottom:48px;flex-wrap:wrap}
+.ft-col{text-align:center}
+.ft-col h4{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.9);font-weight:600;margin-bottom:18px}
+.ft-col ul{display:flex;flex-direction:column;gap:11px;align-items:center}
+.ft-col ul a{font-size:13.5px;font-weight:300;color:rgba(255,255,255,.55);transition:color .2s}
+.ft-col ul a:hover{color:var(--g)}
+.ft-btm{border-top:1px solid rgba(255,255,255,.07);padding-top:26px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font-size:12px}
+.ft-btm-row1{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;color:rgba(255,255,255,.55)}
+.ft-btm-row1 a{color:rgba(255,255,255,.45);transition:color .2s}
+.ft-btm-row1 a:hover{color:var(--g)}
+.ft-btm-address{font-size:11px;color:rgba(255,255,255,.3);line-height:1.7;max-width:560px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1199px){
+  nav{padding:0 36px}
+  .sec{padding:88px 36px}
+  .page-hero{padding:60px 36px 72px}
+  .page-hero-inner{gap:52px}  .intro-2col{gap:56px}
+  .intro-2col-r{padding-left:44px}
+  .approach-grid{gap:52px}
+  .style-grid{gap:52px}
+  .cta-in{padding:64px 36px;gap:40px;grid-template-columns:1fr 1fr}
+  .cta-div{display:none}
+  .nl-in{gap:48px}
+  .ft-cols{gap:48px}
+}
+@media(max-width:1023px){
+  nav{padding:0 28px;height:68px}
+  .nav-links li a{font-size:10.5px;padding:8px 9px}
+  .page-hero{padding:56px 32px 64px}
+  .page-hero-inner{gap:36px}
+  .page-hero-img img{height:420px}
+  .intro-2col{grid-template-columns:1fr;gap:36px}
+  .intro-2col-r{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:32px}
+  .green-cards{grid-template-columns:1fr 1fr;gap:18px}
+  .approach-grid{grid-template-columns:1fr;gap:40px}
+  .approach-img-wrap img{aspect-ratio:16/9}
+  .approach-badge{bottom:16px;left:16px}
+  .pkg-grid{grid-template-columns:1fr 1fr;gap:18px}
+  .style-grid{grid-template-columns:1fr;gap:40px}
+  .style-img-wrap img{aspect-ratio:16/9}
+  .cta-in{grid-template-columns:1fr;gap:36px;padding:60px 32px}
+  .cta-div{display:none}
+  .nl-in{grid-template-columns:1fr;gap:28px}
+  .nl-form{min-width:100%;max-width:480px}
+  footer{padding:60px 32px 32px}
+  .ft-btm{flex-wrap:wrap;gap:10px}
+  .ft-cols{gap:48px}
+}
+@media(max-width:767px){
+  nav{padding:0 22px;height:64px}
+  .ham{display:flex}
+  .nav-links{display:none}
+  .sec{padding:72px 28px}
+  .page-hero{padding:48px 22px 56px}
+  .page-hero-inner{grid-template-columns:1fr;gap:28px}
+  .page-hero-img img{height:66vw}
+  .green-cards{grid-template-columns:1fr;max-width:480px;margin:0 auto}
+  .pkg-grid{grid-template-columns:1fr}
+  .pkg-card.featured::after{display:none}
+  .style-stat-row{gap:12px}
+  .cta-in{padding:56px 24px}
+  .nl-in{padding:0}
+  .nl-form{max-width:100%}
+  footer{padding:52px 28px 28px}
+  .ft-cols{gap:40px}
+  .ft-btm{flex-direction:column;text-align:center;gap:8px}
+  .next-btns{flex-direction:column;align-items:center}
+  .next-btns .btn{width:100%;max-width:320px;justify-content:center}
+}
+@media(max-width:599px){
+  nav{padding:0 18px}
+  .sec{padding:64px 20px}
+  .page-hero{padding:40px 18px 48px}
+  .page-hero-img img{height:76vw}
+  .style-stat-row{flex-direction:row;justify-content:center}
+  .cta-in{padding:52px 20px}
+  .cta-badge{right:8px;top:-12px}
+  .nl-form{flex-direction:column}
+  .nl-form input{border-right:1.5px solid rgba(255,255,255,.14);border-bottom:none;border-radius:var(--r) var(--r) 0 0}
+  .nl-form button{border-radius:0 0 var(--r) var(--r);padding:14px;text-align:center}
+  footer{padding:48px 20px 24px}
+  .ft-btm{flex-direction:column;text-align:center;gap:8px;font-size:11px}
+  h2.dsp{font-size:clamp(26px,7vw,38px)}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  ✦ &nbsp;Trainer · Mentor · Business Entrepreneur &nbsp;·&nbsp; <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank">Book your free discovery call →</a>
+</div>
+
+<!-- NAV (matches homepage exactly) -->
+<div class="nav-wrap" id="navWrap">
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="https://uc9c6352aed6b378284c6e0fa6aa.previews.dropboxusercontent.com/p/thumb/AC_rGsNTPjPMFzMjjYu8Ka1SfA0TJAGrwoCxTh8kIuHSt2FtH4Sa2KC5XfFVOXAwDKvshqjLocSGbxPWnH3pJJFkzUGgh7LD6fetn6jHufX6uBTDyOP7UdHPD0TYVwhXKSJM0vpDEPgiVsg-sGlh3dvUCSMgDnwgP2ABehzakiQ4b2_Vxsillu7_k28taUM_27Y8H0H0JqB87HEu7eAbrg6e4ocy4EDJtZFFEI0WIk0xcVMkod2caYeZzuVWmHvZDgAUS4CyrBTMKgz1DIk65k62fzIOtrgkkJP6tbJXL3ahi9KZV59PVqn660864AB3hmCa-L6d3Li9I8UI_P9wsP2nQfFVgOVZyGNwINNy8fU0QkJOgryqj7ycdvFxK5grHuU/p.png" alt="Paula Wood" style="height:68px;width:auto;display:block;object-fit:contain"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Business Mentoring</a></li>
+      <li><a href="career-coaching.html" class="active">Career Coaching</a></li>
+      <li><a href="#">Training &amp; Workshops</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <button class="ham" onclick="toggleMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mob" id="mobMenu">
+    <a href="index.html">Home</a>
+    <a href="#">Business Mentoring</a>
+    <a href="career-coaching.html">Career Coaching</a>
+    <a href="#">Training &amp; Workshops</a>
+    <a href="about.html">About</a>
+    <button class="mob-cta" onclick="window.open('https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard','_blank')">Book a Free Discovery Call</button>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-text rl">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>·</span>
+        <span>Career Coaching</span>
+      </div>
+      <h1>Clarity, <em>Confidence</em><br>and Career<br><span class="oi">Direction.</span></h1>
+      <p>Career coaching gives you the time and structure to think — with a professional sounding board to help you make sense of your ideas and create a plan that feels truly realistic.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="#packages" class="btn btn-g">View Packages</a>
+        <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-o-ghost">Book a Discovery Call</a>
+      </div>
+    </div>
+    <div class="page-hero-img rr">
+      <img src="https://images.unsplash.com/photo-1773332611522-06b86b48cbf1?q=80&w=2070&auto=format&fit=crop" alt="Career Coaching with Paula Wood" loading="eager"/>
+      <div class="page-hero-img-ov"></div>
+      <div class="page-hero-cap">your next chapter starts here</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO: ONE TO ONE COACHING -->
+<section class="sec" style="background:var(--white)" id="about-coaching">
+  <div class="wrap">
+    <div class="intro-2col">
+      <div class="rl">
+        <div class="ov gn">One to One Career Coaching</div>
+        <h2 class="dsp">Find clarity in your career and <em>confidence</em> in your next step.</h2>
+        <div class="intro-body" style="margin-top:22px">
+          <p>Over the past 20 years, I have supported people at every stage of their professional journey — those stepping into leadership roles, those returning after a break, those transitioning into new industries, and those simply wanting to reconnect with what feels meaningful, motivating and achievable.</p>
+          <p>Together, we will focus on what is important to you and create a plan that feels realistic.</p>
+        </div>
+      </div>
+      <div class="intro-2col-r rr">
+        <div class="pull">"You deserve a career that supports your life — not one that drains it."</div>
+        <p style="font-size:16px;line-height:1.9;color:var(--muted);font-weight:400;margin-bottom:20px">Through our sessions, you can:</p>
+        <ul class="chk-list">
+          <li><span class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Gain clarity on your career goals and direction</li>
+          <li><span class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Rebuild confidence after setbacks or change</li>
+          <li><span class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Identify your strengths and how to use them effectively</li>
+          <li><span class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Learn how to present yourself powerfully in applications and interviews</li>
+          <li><span class="chk-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Create a clear, practical action plan to move forward</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE INTO GREEN -->
+<div class="wave">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 56" preserveAspectRatio="none" height="56">
+    <path d="M0,28 C480,84 960,-28 1440,28 L1440,56 L0,56 Z" fill="#77b243"/>
+  </svg>
+</div>
+
+<!-- WHO IT'S FOR -->
+<section class="sec green-sec" id="who-its-for">
+  <div class="wrap">
+    <div class="green-hd">
+      <div class="ov wh center">Is this right for you?</div>
+      <h2 class="dsp wh reveal" style="text-align:center;margin-top:10px">Career coaching is ideal<br><em>if you are…</em></h2>
+    </div>
+    <div class="green-cards">
+      <div class="g-card reveal d1">
+        <div class="g-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#77b243" stroke-width="1.6"/><circle cx="12" cy="12" r="6" stroke="#77b243" stroke-width="1.6"/><circle cx="12" cy="12" r="2" fill="#bd641c"/>
+          </svg>
+        </div>
+        <h3>Feeling Stuck</h3>
+        <p>You feel unsure what is next in your role or career. You know something needs to change but cannot quite see the path forward yet.</p>
+      </div>
+      <div class="g-card reveal d2">
+        <div class="g-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#77b243" stroke-width="1.6" stroke-linejoin="round" fill="rgba(119,178,67,.15)"/>
+          </svg>
+        </div>
+        <h3>Ready for Change</h3>
+        <p>Considering a career change or transition into a new field, or looking to progress into leadership or a higher-level role.</p>
+      </div>
+      <div class="g-card reveal d3">
+        <div class="g-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" fill="rgba(189,100,28,.15)" stroke="#bd641c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Returning &amp; Rebuilding</h3>
+        <p>Returning to work after time away and wanting to rebuild your confidence, clarity and direction at your own pace.</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:rgba(255,255,255,.82);font-family:'Playfair Display',serif;font-style:italic;font-size:16px;margin-top:36px;line-height:1.7" class="reveal">Simply ready to gain clarity and focus — whatever stage you are at, I am here to help.</p>
+  </div>
+</section>
+
+<!-- WAVE OUT OF GREEN -->
+<div class="wave" style="transform:scaleY(-1);margin-top:-1px">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 56" preserveAspectRatio="none" height="56">
+    <path d="M0,28 C480,84 960,-28 1440,28 L1440,56 L0,56 Z" fill="#77b243"/>
+  </svg>
+</div>
+
+<!-- HOW WE WORK TOGETHER -->
+<section class="sec" style="background:var(--cream)" id="how-we-work">
+  <div class="wrap">
+    <div class="approach-grid">
+      <div class="approach-img-wrap rl">
+        <div class="approach-img-decor"></div>
+        <div class="approach-img-decor2"></div>
+        <img src="https://images.unsplash.com/photo-1773332611522-06b86b48cbf1?q=80&w=2070&auto=format&fit=crop" alt="Coaching session with Paula Wood"/>
+        <div class="approach-badge">
+          <strong>Relaxed but focused</strong>
+          <span>at your pace, your goals</span>
+        </div>
+      </div>
+      <div class="approach-txt rr">
+        <div class="ov">How we work</div>
+        <h2 class="dsp" style="margin-bottom:22px">Sessions designed around <em>you.</em></h2>
+        <p>Our sessions are relaxed but focused — a mix of reflection, practical guidance and structured planning. You will not find jargon, overwhelm, or one-size-fits-all advice here. Just clarity, encouragement and the confidence to move forward.</p>
+        <p>Everything is tailored to you — your goals, your pace. This is your journey.</p>
+        <div class="pull">"I believe coaching should be both supportive and empowering. I will ask the right questions, listen carefully and help you make sense of your ideas."</div>
+        <p>I will also gently challenge where needed to help you see things from a new perspective. My goal is simple: to help you find clarity, confidence and a renewed sense of control over your career path.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="sec pkg-sec" id="packages">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto">
+      <div class="ov gn center">Choose your path</div>
+      <h2 class="dsp reveal" style="text-align:center;margin-top:10px">A package that feels <em>right for you.</em></h2>
+      <p class="reveal" style="font-size:16px;line-height:1.85;color:var(--muted);margin-top:16px;font-weight:300">You choose the option that suits where you are right now. There is no pressure — only the right next step.</p>
+    </div>
+    <div class="pkg-grid">
+      <!-- Clarity Session -->
+      <div class="pkg-card reveal d1">
+        <div class="pkg-top">
+          <div class="pkg-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="4" fill="rgba(119,178,67,.2)" stroke="#77b243" stroke-width="1.6"/>
+              <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="#77b243" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="pkg-title">Career Clarity Session</div>
+          <div class="pkg-sub">One focused hour to help you make a specific decision or cut through the noise</div>
+          <div class="pkg-price-wrap">
+            <div class="pkg-price"><sup>£</sup>95</div>
+            <div class="pkg-price-note">One-off session · 60 minutes</div>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-feat">
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Focused 60-minute one-to-one session</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Targeted at a specific decision or challenge</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Clear action points to move forward</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Perfect as a first step</li>
+          </ul>
+          <a href="/cdn-cgi/l/email-protection#651504100904251504100904120a0a014b060a4b100e5a1610070f0006115826041700001745260904170c111c45360016160c0a0b45270a0a0e0c0b02" class="btn btn-o" style="width:100%;justify-content:center">Book via Email →</a>
+        </div>
+      </div>
+      <!-- Short Programme -->
+      <div class="pkg-card featured reveal d2">
+        <div class="pkg-popular-badge">⭐ Most Popular</div>
+        <div class="pkg-top">
+          <div class="pkg-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22v-7" stroke="#77b243" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M12 15C12 15 8 12 8 7a4 4 0 018 0c0 5-4 8-4 8z" fill="rgba(119,178,67,.2)" stroke="#77b243" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M12 18c0 0-3-1.5-4-4" stroke="#77b243" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="pkg-title">Confidence &amp; Direction</div>
+          <div class="pkg-sub">A short coaching programme to build clarity, confidence and real direction</div>
+          <div class="pkg-price-wrap">
+            <div class="pkg-price"><sup></sup>POA</div>
+            <div class="pkg-price-note">Short programme · Bespoke package</div>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-feat">
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Multiple focused sessions</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Build real confidence and direction</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Structured progress between sessions</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Full support and accountability</li>
+          </ul>
+          <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-g" style="width:100%;justify-content:center">Book Discovery Call →</a>
+        </div>
+      </div>
+      <!-- Ongoing Monthly -->
+      <div class="pkg-card reveal d3">
+        <div class="pkg-top">
+          <div class="pkg-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9.5" fill="rgba(119,178,67,.12)" stroke="#77b243" stroke-width="1.6"/>
+              <path d="M12 6v6l4 2" stroke="#bd641c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="pkg-title">Ongoing Monthly Support</div>
+          <div class="pkg-sub">Continued growth, accountability and support every step of the way</div>
+          <div class="pkg-price-wrap">
+            <div class="pkg-price"><sup></sup>POA</div>
+            <div class="pkg-price-note">Monthly · Ongoing commitment</div>
+          </div>
+        </div>
+        <div class="pkg-body">
+          <ul class="pkg-feat">
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Regular monthly coaching sessions</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Ongoing growth and accountability</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Evolves as your journey evolves</li>
+            <li><span class="pkg-dot"><svg viewBox="0 0 10 10"><polyline points="2,5 4.2,7.2 8,3"/></svg></span>Consistent support and check-ins</li>
+          </ul>
+          <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-g" style="width:100%;justify-content:center">Book Discovery Call →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY COACHING STYLE -->
+<section class="sec style-sec">
+  <div class="wrap">
+    <div class="style-grid">
+      <div class="style-img-wrap rl">
+        <div class="style-petal"></div>
+        <img src="https://images.unsplash.com/photo-1773332611522-06b86b48cbf1?q=80&w=2070&auto=format&fit=crop" alt="Paula Wood coaching style"/>
+        <div class="style-flourish">with warmth &amp; honesty</div>
+      </div>
+      <div class="rr">
+        <div class="ov">My coaching style</div>
+        <h2 class="dsp" style="margin-bottom:22px">Supportive. Empowering.<br><em>Real.</em></h2>
+        <div class="style-txt">
+          <p>I believe coaching should be both supportive and empowering. I will ask the right questions, listen carefully and help you make sense of your ideas — but I will also gently challenge where needed to help you see things from a new perspective.</p>
+          <p>My goal is simple: to help you find clarity, confidence and a renewed sense of control over your career path.</p>
+          <p>You will find no jargon, no overwhelm and no one-size-fits-all advice here. Just honest, warm, practical guidance — tailored entirely to you.</p>
+        </div>
+        <div class="style-stat-row">
+          <div class="style-stat">
+            <div class="style-stat-n">20+</div>
+            <div class="style-stat-l">Years experience</div>
+          </div>
+          <div class="style-stat">
+            <div class="style-stat-n">1,000s</div>
+            <div class="style-stat-l">People supported</div>
+          </div>
+          <div class="style-stat">
+            <div class="style-stat-n">UK &amp; Int'l</div>
+            <div class="style-stat-l">Reach</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<div class="cta-strip">
+  <div class="cta-in">
+    <div class="cta-t rl">
+      <div class="ov">Take the first step</div>
+      <h2>Clarity is not just about seeing where you are going — it is about feeling <em>confident</em> with how you get there.</h2>
+      <p>Whether you are at a crossroads, growing your career, or simply ready for a change — I am here to help you find clarity and take the next step with true confidence.</p>
+      <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-g" style="margin-top:26px">Book Your Free Discovery Call</a>
+    </div>
+    <div class="cta-div"></div>
+    <div class="cta-img rr">
+      <img src="https://images.unsplash.com/photo-1773332611522-06b86b48cbf1?q=80&w=2070&auto=format&fit=crop" alt="Book a discovery call with Paula Wood"/>
+      <div class="cta-badge"><strong>Free</strong><span>20-min call</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- YOUR NEXT STEP -->
+<section class="sec next-sec" id="next-step">
+  <div class="next-inner">
+    <div class="ov gn center reveal">Your next step</div>
+    <h2 class="dsp reveal" style="text-align:center;margin-top:10px">Ready to move forward — even if you are not yet sure what <em>"forward"</em> looks like?</h2>
+    <p class="reveal" style="margin-top:22px">You deserve a career that supports your life, not one that drains it. My role is to help you step forward with clarity, confidence and a sense of purpose — whatever stage you are at.</p>
+    <p class="reveal">If you are ready to start the conversation, I am here and ready to help.</p>
+
+    <div class="next-btns reveal">
+      <a href="/cdn-cgi/l/email-protection#730312061f12330312061f12041c1c175d101c5d06184c000611191610074e30120116160153301f12011a070a5330121f1f53311c1c181a1d14" class="btn btn-o">Book a Career Clarity Call — £95 →</a>
+      <a href="https://outlook.office.com/bookwithme/user/08222b697be0481780171e29d80ff94c@examofficers.co.uk/meetingtype/rlX3TAeSAUu6hSCfOLuVAA2?anonymous&ismsaljsauthenabled&ep=mcard" target="_blank" class="btn btn-g">Free 10-Min Discovery Call →</a>
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <div class="divider-tag reveal">or</div>
+      <p class="reveal" style="font-size:14px;color:var(--muted);font-weight:300;line-height:1.7">Interested in ongoing monthly support? Book a free ten-minute discovery call to talk about how we can work together.</p>
+    </div>
+    <div style="margin-top:28px;text-align:center" class="reveal">
+      <span class="price-note">Career Clarity Call · <strong>£95</strong> · One hour · One-to-one · Book via email or contact form</span>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl">
+  <div class="nl-in">
+    <div class="nl-t rl">
+      <h3>Join the <em>newsletter</em></h3>
+      <p>Insights, inspiration and practical guidance — delivered to your inbox. No spam, ever.</p>
+    </div>
+    <form class="nl-form rr" onsubmit="nlSub(event)">
+      <input type="email" placeholder="Enter your email address" required/>
+      <button type="submit">Sign Up Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER (matches homepage exactly) -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-logo">
+        <img src="https://uc9c6352aed6b378284c6e0fa6aa.previews.dropboxusercontent.com/p/thumb/AC_rGsNTPjPMFzMjjYu8Ka1SfA0TJAGrwoCxTh8kIuHSt2FtH4Sa2KC5XfFVOXAwDKvshqjLocSGbxPWnH3pJJFkzUGgh7LD6fetn6jHufX6uBTDyOP7UdHPD0TYVwhXKSJM0vpDEPgiVsg-sGlh3dvUCSMgDnwgP2ABehzakiQ4b2_Vxsillu7_k28taUM_27Y8H0H0JqB87HEu7eAbrg6e4ocy4EDJtZFFEI0WIk0xcVMkod2caYeZzuVWmHvZDgAUS4CyrBTMKgz1DIk65k62fzIOtrgkkJP6tbJXL3ahi9KZV59PVqn660864AB3hmCa-L6d3Li9I8UI_P9wsP2nQfFVgOVZyGNwINNy8fU0QkJOgryqj7ycdvFxK5grHuU/p.png" alt="Paula Wood" style="height:72px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.85"/>
+      </div>
+      <p>Helping professionals and business owners find clarity, confidence and growth in their next step.</p>
+      <div class="ft-social">
+        <a href="https://www.facebook.com/ExamsOfficers" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/paulawood1" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="ft-cols">
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Business Mentoring</a></li>
+          <li><a href="career-coaching.html">Career Coaching</a></li>
+          <li><a href="#">Training &amp; Workshops</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Paula</a></li>
+          <li><a href="about.html#story">My Story</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-btm">
+      <div class="ft-btm-row1">
+        <span>© 2026 Paula Wood. All rights reserved.</span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+      <div class="ft-btm-address">Registered Company Address: 1st Floor Manor House, Ryehill, East Yorkshire, HU12 9NH. &nbsp;·&nbsp; Company No. 16803732</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open')}
+
+// Scroll reveal — fire immediately for anything already in view
+const els=document.querySelectorAll('.reveal,.rl,.rr')
+const obs=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('visible');obs.unobserve(i.target)}})},{threshold:0,rootMargin:'0px 0px -40px 0px'})
+els.forEach(el=>obs.observe(el))
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('navWrap').classList.toggle('scrolled',window.scrollY>20)
+})
+
+function nlSub(e){
+  e.preventDefault()
+  const b=e.target.querySelector('button')
+  b.textContent="You're in! ✓"
+  b.style.background='#68a038'
+  setTimeout(()=>{e.target.reset();b.textContent='Sign Up Now';b.style.background=''},3200)
+}
+</script>
+</body>
+</html>
